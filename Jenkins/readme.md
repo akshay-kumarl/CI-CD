@@ -67,3 +67,29 @@ node {
 }
 ```
 
+
+
+---
+
+cleans()
+
+```
+pipeline {
+    agent any
+    options {
+        skipDefaultCheckout(true) // Disables automatic checkout
+    }
+    stages {
+        stage('Build') {
+            steps {
+                cleanWs() // Cleans the workspace before checkout
+                checkout scm // You must now explicitly check out your code
+                // ... rest of your build steps
+            }
+        }
+    }
+}
+
+
+```
+
