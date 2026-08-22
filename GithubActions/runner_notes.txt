@@ -1,0 +1,20 @@
+for installation of runner on ubuntu 
+
+can follow 
+pdf 
+
+
+
+for installation of runner on amazon linux 
+
+
+if you get any error in this line 
+
+./config.sh --url https://github.com/akshay-kumarl/HTML-Webapp --token A2LG6Z6ADPMOIQB3VXUEKQLKRGHCU
+
+use below commands
+
+sudo yum update -y
+sudo yum install -y libicu
+
+
