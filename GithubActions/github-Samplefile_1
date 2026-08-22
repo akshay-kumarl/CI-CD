@@ -17,7 +17,7 @@ jobs:                  # Define a series of jobs that will run
 
     steps:              # Steps define the individual actions in the job
       - name: Checkout code   # Step to check out the code from repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
       - name: Set up Node.js   # Setup a specific environment/tool
         uses: actions/setup-node@v2
@@ -41,7 +41,7 @@ jobs:                  # Define a series of jobs that will run
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
         
       - name: Deploy to server
         run: ./deploy-script.sh  # Custom deployment script
@@ -53,7 +53,7 @@ jobs:                  # Define a series of jobs that will run
 
     steps:
     - name: Login to Docker Hub
-      uses: docker/login-action@v3
+      uses: docker/login-action@v5
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
