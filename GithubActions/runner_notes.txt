@@ -18,3 +18,9 @@ sudo yum update -y
 sudo yum install -y libicu
 
 
+
+for runner to run background use below commands
+cd ~/actions-runner
+
+sudo ./svc.sh install
+sudo ./svc.sh start
