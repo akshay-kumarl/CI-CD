@@ -1,0 +1,2600 @@
+
+
+demo :
+
+DAY - O 
+
+Git Bash download & Installation 
+
+Basic Linux Commands :
+
+7396627149 - 
+
+pwd
+
+touch file1 file2
+
+mkdir dir1 dir2 
+
+rm -rf file/dir 
+
+ls 
+
+ll
+
+ls -la
+
+ls -lrth 
+
+cd dir
+
+cd /
+
+cd ..
+
+clear 
+
+cat fname 
+
+--------------------------------------
+
+GIT HUB ACCOUNT :
+
+
+---------------------------------------
+==================================================
+AWS FREE TIER account creation
+
+AWS Free Tier allows new users to try AWS services
+without paying immediately.
+
+It is mainly used for:
+- Learning AWS
+- Practice
+- Small experiments
+- Beginners in Cloud
+
+
+========================================
+AWS FREE TIER – CURRENT USAGE MODEL
+(NEW ACCOUNTS)
+========================================
+
+For new AWS accounts:
+
+- AWS offers a Free Plan with credits
+- You can get up to $200 AWS credits
+  - $100 at signup
+  - Up to $100 by completing learning activities
+
+- Valid for:
+  - 6 months
+  - OR until credits are used (whichever comes first)
+
+- No charges unless you upgrade to Paid Plan
+
+
+========================================
+
+day -1 : 2 apr 2026 
+
+
+server creation 
+Connection to server 
+
+
+whoami ---> ec2-user 
+
+sudo su - root 
+
+yum installl <pkg>
+
+
+============
+
+mount -o remount,size=4G /tmp
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo		
+sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+sudo yum upgrade -y
+sudo yum install java-21-amazon-corretto -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+
+mount -o remount,size=4G /tmp 
+sudo systemctl restart jenkins
+sudo systemctl stop jenkins
+sudo systemctl start jenkins
+
+
+ctrl + c 
+
+ec2-32-192-77-188.compute-1.amazonaws.com:8080
+
+/var/lib/jenkins 
+
+
+
+
+
+
+7396627149  --> 
+
+
+
+
+=====================================
+
+
+Jenkins.instance.getAllItems().each {
+    println(it.name)
+}
+
+=================================
+
+https://github.com/devopstraininghub
+
+https://github.com/devopstraininghub/mindcircuit16d.git
+
+
+
+
+===============================
+
+http://44.200.135.151:8080/job/job3-prod/build?token=abc123 
+
+or /buildWithParameters?token=TOKEN_NAME
+
+
+-------
+CRON TAB:
+
+===============
+
+======================================================================================================================================
+
+NOTES :
+
+--------------------------------------------------
+WHAT IS JENKINS?
+--------------------------------------------------
+
+    Jenkins is an open-source automation tool
+    used for CI/CD (Continuous Integration & Deployment).
+
+    It automates:
+        • Build
+        • Test
+        • Deploy
+
+
+--------------------------------------------------
+JENKINS INSTALLATION (AMAZON LINUX / RHEL)
+--------------------------------------------------
+
+mount -o remount,size=4G /tmp
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo		
+sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+sudo yum upgrade -y
+sudo yum install java-21-amazon-corretto -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+explanation:
+
+    Increase /tmp space (optional):
+
+        mount -o remount,size=4G /tmp
+
+
+    Update system:
+
+        sudo yum update -y
+
+
+    Add Jenkins repository:
+
+        sudo wget -O /etc/yum.repos.d/jenkins.repo \
+            https://pkg.jenkins.io/rpm-stable/jenkins.repo
+
+
+    Import Jenkins key:
+
+        sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+
+
+    Upgrade packages:
+
+        sudo yum upgrade -y
+
+
+    Install Java (required):
+
+        sudo yum install java-21-amazon-corretto -y
+
+
+    Install Jenkins:
+
+        sudo yum install jenkins -y
+
+
+    Enable Jenkins service:
+
+        sudo systemctl enable jenkins
+
+
+    Start Jenkins:
+
+        sudo systemctl start jenkins
+
+
+    Check status:
+
+        sudo systemctl status jenkins
+
+
+--------------------------------------------------
+ACCESS JENKINS
+--------------------------------------------------
+
+    Open browser:
+
+        http://<EC2-PUBLIC-IP>:8080
+
+    Get initial admin password:
+
+        sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+--------------------------------------------------
+JENKINS ARCHITECTURE
+--------------------------------------------------
+
+    Master:
+        Controls jobs and UI
+
+    Agent:
+        Executes jobs
+
+    One master → Multiple agents
+
+
+--------------------------------------------------
+JENKINS JOB TYPES
+--------------------------------------------------
+
+    • Freestyle
+    • Pipeline
+    • Multibranch Pipeline
+
+
+--------------------------------------------------
+JENKINSFILE (PIPELINE AS CODE)
+--------------------------------------------------
+
+Example:
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    echo "Building application"
+                }
+            }
+        }
+    }
+
+
+--------------------------------------------------
+REAL DEVOPS FLOW
+--------------------------------------------------
+
+    GitHub → Jenkins → Build → Test → Deploy
+
+
+--------------------------------------------------
+IMPORTANT FEATURES
+--------------------------------------------------
+
+    • Plugins
+    • Pipeline as code
+    • Integration with:
+        - AGitHub
+        - Docker
+        - Kubernetes
+        - AWS
+
+
+------------------------------
+
+    Jenkins = CI/CD tool
+
+    Install → Start → Access via browser
+
+    Automates:
+        Build → Test → Deploy
+
+
+=========================================================================================================================
+
+============================================================
+                VIM EDITOR BASICS
+============================================================
+
+Open a file in vim:
+    vim fname
+
+------------------------------------------------------------
+Insert Mode  ( esc - i )
+
+   - Press: i
+   - Used to type/edit text
+
+   Example:
+        esc → i  ----> Insert Mode
+
+        ---
+        ----
+        ---  data---
+        ----
+        ---
+
+------------------------------------------------------------
+EXITING & SAVING
+------------------------------------------------------------
+
+Press ESC first to go to Normal Mode, then use:
+:
+esc :w      → Save file
+esc :q      → Quit/close
+esc :wq     → Save and Quit
+esc :wq!    → Force Save and Quit
+
+============================================================
+                DOWNLOAD FILES
+============================================================
+
+Using wget:
+    wget <web-URL>
+
+Example:
+    wget https://example.com/file.tar.gz
+
+============================================================
+                EXTRACT FILES
+============================================================
+
+Extract .tar.gz file:
+    tar -xvf file.tar.gz
+
+Options:
+    -x  → Extract
+    -v  → Verbose (shows progress)
+    -f  → File name
+
+============================================================
+
+TOMCAT
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+  <tomcat-users>
+  <role rolename="manager-gui"/>
+ <user username="tomcat" password="tomcat" roles="manager-gui, manager-script, manager-status"/>
+</tomcat-users>
+
+
+
+======================================================================================
+DATE: 14 APR 2026
+
+TOPICS: 
+JENKINS UPGRADE 
+JENKINS DISTRIBUTED MASTER -SLAVE ARCH 
+JENKINS RESTARTS 
+
+====================================================================
+JENKINS UPGRADE & BACKUP 
+====================================================================
+
+--------------------------------------------------
+WHY DO WE UPGRADE JENKINS?
+--------------------------------------------------
+
+    • Security patches (very important)
+    • Bug fixes
+    • New features
+    • Plugin compatibility
+    • Performance improvements
+
+    Regular upgrade is mandatory in production.
+
+
+--------------------------------------------------
+WHAT IS jenkins.war?
+--------------------------------------------------
+
+    jenkins.war is the core Jenkins application file.
+
+    Location (Linux):
+
+        /usr/share/java/jenkins.war
+
+    Jenkins service runs using this WAR file.
+
+
+--------------------------------------------------
+IMPORTANT BEFORE UPGRADE
+--------------------------------------------------
+
+    ALWAYS take backup before upgrading.
+
+    Backup includes:
+
+        • jenkins.war file
+        • Jenkins home directory
+
+
+--------------------------------------------------
+STEP 1: BACKUP jenkins.war and delete the war 
+--------------------------------------------------
+
+    systemctl stop jenkins 
+
+    sudo cp -rp /usr/share/java/jenkins.war /usr/share/java/jenkins.war.bak_14apr2026
+    cd /usr/share/java/
+    rm -rf jenkins.war
+    
+--------------------------------------------------
+STEP 2: BACKUP JENKINS HOME
+--------------------------------------------------
+
+    Jenkins home contains:
+
+        • Jobs
+        • Configurations
+        • Plugins
+        • Credentials
+
+Location:
+
+    /var/lib/jenkins/
+
+Command:
+
+    sudo cp -r /var/lib/jenkins \
+        /var/lib/jenkins_backup
+
+
+--------------------------------------------------
+STEP 3: DOWNLOAD NEW JENKINS WAR
+--------------------------------------------------
+
+Command:
+   
+    cd /usr/share/java/
+
+    sudo wget https://get.jenkins.io/war/2.559/jenkins.war
+
+
+--------------------------------------------------
+STEP 5: RESTART JENKINS
+--------------------------------------------------
+
+Command:
+
+    sudo systemctl restart jenkins
+
+    Check status:
+
+        sudo systemctl status jenkins
+
+
+--------------------------------------------------
+STEP 6: VERIFY UPGRADE
+--------------------------------------------------
+
+    • Login to Jenkins UI
+    • Check version in dashboard
+    • Verify jobs are working
+
+
+--------------------------------------------------
+ROLLBACK (IF ISSUE OCCURS)
+--------------------------------------------------
+
+    Stop Jenkins:
+
+        sudo systemctl stop jenkins
+
+    Restore old WAR:
+
+        sudo mv /usr/share/java/jenkins.war.bak_14apr2026 \
+            /usr/share/java/jenkins.war
+
+    Start Jenkins:
+
+        sudo systemctl start jenkins
+
+
+--------------------------------------------------
+REAL DEVOPS BEST PRACTICE
+--------------------------------------------------
+
+    • Always test upgrade in staging first
+    • Backup before upgrade
+    • Check plugin compatibility
+    • Upgrade plugins after Jenkins upgrade
+    • Monitor logs after upgrade
+
+
+--------------------------------------------------
+IMPORTANT FILE LOCATIONS
+--------------------------------------------------
+
+    Jenkins WAR:
+        /usr/share/java/jenkins.war
+
+    Jenkins Home:
+        /var/lib/jenkins/
+
+    Logs:
+        /var/log/jenkins/jenkins.log
+
+=========================================================================================================================
+JENKINS DISTRIBUTED ARCHITECTURE (MASTER–AGENT)
+====================================================================
+
+--------------------------------------------------
+WHAT IS DISTRIBUTED ARCHITECTURE?
+--------------------------------------------------
+
+    Jenkins distributed architecture allows
+    multiple machines to work together.
+
+    Instead of running all jobs on one server,
+    Jenkins distributes work to multiple nodes.
+
+    Improves:
+        • Performance
+        • Scalability
+        • Flexibility
+		. Security 
+
+
+--------------------------------------------------
+MASTER–AGENT ARCHITECTURE
+--------------------------------------------------
+
+    Master (Controller):
+        • Manages Jenkins
+        • UI (Dashboard)
+        • Schedules jobs
+        • Stores configuration
+
+    Agent (Slave/Node):
+        • Executes jobs
+        • Runs builds
+        • Can be multiple machines
+
+
+--------------------------------------------------
+WHY DO WE NEED DISTRIBUTED SETUP?
+--------------------------------------------------
+Building on the built-in node can be a security issue. You should set up distributed builds.
+
+    Problem with single server:
+
+        • Heavy load
+        • Slow builds
+        • Resource limitation
+		. Security concerns 
+
+    Solution:
+
+        Distribute jobs across multiple agents
+
+    Benefits:
+
+        • Faster builds
+        • Parallel execution
+        • Better resource utilization
+
+
+--------------------------------------------------
+HOW IT WORKS (FLOW)
+--------------------------------------------------
+
+    Developer pushes code
+            ↓
+    Jenkins Master receives trigger
+            ↓
+    Master schedules job
+            ↓
+    Job sent to Agent
+            ↓
+    Agent executes build/test/deploy
+            ↓
+    Result sent back to Master
+
+
+--------------------------------------------------
+AGENT TYPES
+--------------------------------------------------
+
+    1) Static Agents
+        • Manually created
+        • Always available
+
+    2) Dynamic Agents
+        • Created on demand
+        • Used in cloud (AWS, Kubernetes)
+
+
+--------------------------------------------------
+HOW MASTER COMMUNICATES WITH AGENTS
+--------------------------------------------------
+
+    Common methods:
+
+        • SSH
+        • JNLP (Java Web Start)
+        • Kubernetes plugin
+
+    Master → Agent connection must be secure.
+
+
+--------------------------------------------------
+SETTING UP AGENT (HIGH LEVEL STEPS)
+--------------------------------------------------
+
+    Step 1:
+        Go to Manage Jenkins → Nodes
+
+    Step 2:
+        Add new node
+
+    Step 3:
+        Configure:
+
+            • Node name
+            • Remote directory
+            • Labels
+            • Launch method (SSH/JNLP)
+
+    Step 4:
+        Connect agent machine
+
+
+--------------------------------------------------
+LABELS (IMPORTANT)
+--------------------------------------------------
+
+    Labels are used to assign jobs to specific agents.
+
+Example:
+
+    agent {
+        label "docker"
+    }
+
+    Meaning:
+        Run job only on agent with label "docker"
+
+
+--------------------------------------------------
+REAL-TIME DEVOPS USE CASE
+--------------------------------------------------
+
+    Scenario:
+
+        • Java builds require Maven
+        • Docker builds require Docker
+        • Testing needs separate environment
+
+    Setup:
+
+        Agent 1 → Java + Maven
+        Agent 2 → Docker
+        Agent 3 → Testing tools
+
+    Jenkins routes jobs accordingly.
+
+
+--------------------------------------------------
+ADVANCED SETUP (CLOUD)
+--------------------------------------------------
+
+    Jenkins can create agents dynamically:
+
+        • AWS EC2 plugin
+        • Kubernetes plugin
+
+    Flow:
+
+        Job triggered
+            ↓
+        New agent created
+            ↓
+        Job executed
+            ↓
+        Agent terminated
+
+    Benefit:
+        Cost optimization
+
+
+--------------------------------------------------
+ADVANTAGES
+--------------------------------------------------
+
+    • Parallel builds
+    • Faster execution
+    • Scalable
+    • Supports multiple environments
+    • Efficient resource usage
+
+
+--------------------------------------------------
+DISADVANTAGES
+--------------------------------------------------
+
+    • Setup complexity
+    • Network dependency
+    • Agent management needed
+
+
+--------------------------------------------------
+IMPORTANT NOTES
+--------------------------------------------------
+
+    • Master should NOT run heavy jobs
+    • Always use agents for execution
+    • Secure communication (SSH keys)
+    • Use labels for control
+
+
+--------------------------------------------------
+SIMPLE SUMMARY
+--------------------------------------------------
+
+    Master:
+        Controls everything
+
+    Agent:
+        Executes jobs
+
+    Distributed Jenkins:
+        One master → Multiple agents
+
+    Purpose:
+        Faster, scalable CI/CD execution
+		
+		
+============================================================================
+		
+JENKINS RESTARTS :
+
+
+systemctl start/stop/status/restrat jenkins 
+
+
+from GUI:
+
+http://PUB_IP:8080/restart
+http://PUB_IP:8080/safeRestart
+
+================================================================================
+
+
+DATE : 17 APR 2026
+
+====================
+JENKINS PIPELINE 
+====================
+
+--------------------------------------------------
+WHAT IS JENKINS PIPELINE?
+--------------------------------------------------
+
+    Jenkins Pipeline is a way to define CI/CD
+    process as CODE.
+
+    Instead of manual UI steps (freestyle),
+    we write pipeline in a file called:
+
+        Jenkinsfile
+
+    It automates:
+
+        • Build
+        • Test
+        • Deploy
+
+
+--------------------------------------------------
+WHY PIPELINE IS REQUIRED?
+--------------------------------------------------
+
+    Problems with Freestyle Jobs:
+
+        • Manual configuration
+        • Hard to track changes
+        • Not reusable
+        • Difficult for complex workflows
+		. UI based 
+
+    Pipeline solves:
+
+        • Code-based configuration - Pipeline as Code
+        • Version control (Git)
+        • Easy automation
+        • Supports complex workflows
+        • Reusable
+        • Supports parallel execution
+        • Better visibility
+        • Easy automation
+        • Supports CI/CD fully
+       
+
+--------------------------------------------------
+WHAT IS JENKINSFILE?
+--------------------------------------------------
+
+    A file that contains pipeline code.
+
+    Stored in project repo (GitHub).
+
+Example:
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    echo "Build started"
+                }
+            }
+        }
+    }
+
+
+--------------------------------------------------
+PIPELINE STAGES
+--------------------------------------------------
+
+    Typical stages:
+
+        • Checkout
+        • Build
+        • Test
+        • Package
+        • Deploy
+
+
+
+--------------------------------------------------
+TYPES OF PIPELINES
+--------------------------------------------------
+
+    1) Declarative Pipeline
+    2) Scripted Pipeline
+
+
+--------------------------------------------------
+1) DECLARATIVE PIPELINE
+--------------------------------------------------
+
+    Simple and structured syntax.
+
+    Uses predefined blocks:
+
+        pipeline { }
+        stages { }
+        steps { }
+
+Example:
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    echo "Building app"
+                }
+            }
+
+            stage('Test') {
+                steps {
+                    echo "Testing app"
+                }
+            }
+        }
+    }
+
+
+
+--------------------------------------------------
+2) SCRIPTED PIPELINE
+--------------------------------------------------
+
+
+    node {
+        stage('Build') {
+            echo "Building app"
+        }
+
+        stage('Test') {
+            echo "Testing app"
+        }
+    }
+
+Features:
+
+    • Full programming control
+    • Complex logic possible
+    • Harder to understand
+
+
+
+--------------------------------------------------
+REAL DEVOPS USE CASE
+--------------------------------------------------
+
+    Developer pushes code → GitHub
+
+        ↓
+
+    Jenkins triggers pipeline
+
+        ↓
+
+    Build using Maven
+
+        ↓
+
+    Run tests
+
+        ↓
+
+    Build Docker image
+
+        ↓
+
+    Deploy to Kubernetes
+
+
+
+
+
+
+====================================================================================
+
+
+DATE: 21 APR 2026
+
+==============================================================
+sed command -->
+sed 's/madhu/jenkins/' test > test2
+
+Replaces occurrences of a pattern with a specified replacement.
+Syntax: 
+
+
+sed s/pattern/replacement/g  > newupdatedfile
+
+sed 's/madhu/kiran/' input.txt     # Replace first occurrence of 'madhu' with 'kiran' in each line
+sed 's/madhu/kiran/g' input.txt    # Replace all occurrences of 'madhu' with 'kiran' in each line
+sed 's/madhu/kiran/2' input.txt    # Replace the second occurrence of ''madhu' with 'kiran' in each line
+
+-------
+STRAT
+madhu 
+kiran 
+raghu 
+rajesh 
+rahim 
+david 
+END 
+
+
+
+sed -i '/STRAT/,/END/c\BATCH17D' input.txt
+
+
+===============================================================
+vim jenkins_setup.sh
+
+#!/bin/bash 
+
+mount -o remount,size=4G /tmp
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo		
+sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key
+sudo yum upgrade -y
+sudo yum install java-21-amazon-corretto -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+
+======================
+manual setup apporach :
+cd /opt 
+
+java 
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz
+tar -xvf apache-tomcat-9.0.117.tar.gz
+cd apache-tomcat-9.0.117
+cd webapps/manager/META-INF/context.xml  ---> sed 
+
+cd conf/tomcat-users.xml --> backup --> add newfile 
+
+server.xml ---> connnectorport -8080 ---> replace --
+
+bin ---> start 
+
+
+
+======================================================================
+tomcat_setup.sh
+
+ 
+#!/bin/bash
+
+
+sudo yum install java -y
+cd /opt
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz
+sudo tar -xvf /opt/apache-tomcat-9.0.117.tar.gz
+
+cd /opt/apache-tomcat-9.0.117/webapps/manager/META-INF
+
+sed -i '/<Context/,/<\/Context>/c\<Context antiResourceLocking="false" privileged="true" >\n</Context>' context.xml
+
+
+cd /opt/apache-tomcat-9.0.117/conf
+sudo mv tomcat-users.xml tomcat-users_bkup_21apr2026.xml
+sudo touch tomcat-users.xml
+sudo echo '<?xml version="1.0" encoding="utf-8"?>
+        <tomcat-users>
+        <role rolename="manager-gui"/>
+        <user username="tomcat" password="tomcat" roles="manager-gui, manager-script, manager-status"/>
+        </tomcat-users>' > tomcat-users.xml
+
+cd /opt/apache-tomcat-9.0.117/conf/
+sudo sed -i 's/Connector port="8080"/Connector port="8081"/g' server.xml
+sudo /opt/apache-tomcat-9.0.117/bin/startup.sh
+
+===================================================================
+
+GIT BASICS:
+
+git clone <url> 
+
+
+
+======================================================================
+============
+
+DATE: 22 APR 2026 
+
+
+JAVA  INSTALLATION widnows 
+
+JAVA_HOME:    C:\Program Files\Java\jdk-1.8
+
+C:\Program Files\Java\jdk1.8.0_481
+PATH : C:\Program Files\Java\jdk-1.8\bin
+
+============
+MVN INSTALLATION ON WINDOWS 
+M2_HOME  
+C:\Users\Madhu Kiran\Desktop\BATCH16-D\apache-maven-3.9.11-bin\apache-maven-3.9.11
+
+C:\Users\Madhukiran\Desktop\jenkinsd\apache-maven-3.9.15\bin
+
+PATH: 
+C:\Users\Madhu Kiran\Desktop\BATCH16-D\apache-maven-3.9.11-bin\apache-maven-3.9.11\bin
+
+
+MAVEN :
+
+APACHE MAVEN 
+
+JAVA 
+BUILD TOOL + PM TOOL 
+POM.XML 
+=======
+
+JAVA EVOLUTION: 
+
+
+
+===========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+=================================================================================================
+
+DATE: 
+23 APR 2026
+
+
+SCP 
+
+scp src dest 
+
+scp -i jenkinskey.pem prabhas.txt ec2-user@ec2-13-218-146-145.compute-1.amazonaws.com:/tmp/.
+
+
+
+export JAVA_HOME=/opt/jdk1.8.0_491
+
+export PATH=JAVA_HOME/bin 
+
+
+****************************************
+Classic problem in SDLC
+
+Custom java installation on linux OS 
+
+***************************************
+
+JAVA_HOME :  /opt/jdk1.8.0_491
+path : /opt/jdk1.8.0_491/bin
+
+
+*******************************************************
+
+vim /etc/profile.d/java.sh
+
+export JAVA_HOME=/opt/jdk1.8.0_491
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+*********************************************************
+source /etc/profile.d/java.sh
+
+
+
+
+================================================================================
+
+
+DATE: 25 APR 2026 
+
+
+maven repositories
+maven java dependencies
+maven life cycle
+
+
+
+
+MAVEN repositories
+
+ - LOCAL REPO   ---->   user home --> .m2 
+ - CENTRAL repos  ---> https://repo1.maven.org/maven2/
+ - REMOTE REPO  ---> HTTPS://XYZ..
+
+
+================
+MVN IS ALSO A PROJECT MANAGEMENT TOOL 
+
+PROJECT DIRECTORY STRUCTURE 
+
+HOW TO generate a new project skeleton (template).
+
+
+mvn archetype:generate
+
+ANT 
+GRADE ---> build.xml
+
+===========
+
+MAVEN LIFE CYCE :
+
+
+mvn clean install 
+mvn clean package 
+mvn clean deploy 
+
+
+https://www.linkedin.com/posts/madhukiran-gorekar_maven-buildlifecycle-devops-activity-7247579291457093633-GBIP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAOaZKYBgHqqOuWNEMewLeHAlTGV2Ykkh5A
+
+
+============================
+
+
+
+DATE: 27 APR 2026
+
+WEBHOOK + GITHUB → JENKINS (NOTES)
+
+---
+
+WHAT IS A WEBHOOK?
+
+---
+
+A webhook is a mechanism for one application to send
+real-time data to another application when an event occurs.
+
+It works using HTTP requests (usually POST).
+
+Example:
+
+* Event: Code pushed to GitHub
+* Action: GitHub sends data to Jenkins automatically
+
+---
+
+WHY WEBHOOK IS USED?
+
+---
+
+To avoid polling (continuous checking).
+
+Without webhook:
+Jenkins keeps asking GitHub → "Any changes?"
+
+With webhook:
+GitHub directly tells Jenkins → "Code pushed!"
+
+Benefits:
+
+* Real-time trigger
+* Faster builds
+* Less resource usage
+
+---
+
+FLOW (GITHUB → JENKINS)
+
+---
+
+Developer pushes code to GitHub
+GitHub triggers webhook
+GitHub sends HTTP POST request
+Jenkins receives request
+Jenkins triggers job build
+
+---
+
+WHAT IS /github-webhook/ ?
+
+---
+
+/github-webhook/ is a special endpoint (URL path)
+provided by Jenkins GitHub plugin.
+
+Example:
+http://your-jenkins-url/github-webhook/
+
+It acts as a listener for GitHub events.
+
+---
+
+WHY WE MUST ADD /github-webhook/ ?
+
+---
+
+Because Jenkins only understands GitHub webhook
+requests on this specific endpoint.
+
+If NOT added:
+
+* Jenkins will not recognize request
+* Webhook will fail
+* No build will trigger
+
+Think of it like:
+
+* Normal URL → general access
+* /github-webhook/ → dedicated webhook receiver
+
+---
+
+WHAT HAPPENS INTERNALLY?
+
+---
+
+GitHub sends:
+POST /github-webhook/
+
+Jenkins:
+
+* Reads JSON payload
+* Identifies repository
+* Matches Jenkins job
+* Triggers build
+
+---
+
+WEBHOOK PAYLOAD (SIMPLE IDEA)
+
+---
+
+GitHub sends data like:
+
+* repository name
+* branch name
+* commit ID
+* author
+
+Format: JSON
+
+---
+
+IMPORTANT CONFIGURATION POINTS
+
+---
+
+In Jenkins:
+✔ Enable "GitHub hook trigger for GITScm polling"
+
+In GitHub:
+✔ Add webhook
+✔ Payload URL must be:
+http://your-jenkins-url/github-webhook/
+✔ Content type: application/json
+✔ Event: Push
+
+=================================================================================
+
+TOMCAT ROOT DEPLOYMENT NOTES
+
+Software: Apache Tomcat
+
+---
+
+## WHAT IS ROOT APPLICATION
+
+* ROOT is the default application in Tomcat
+* Location: webapps/ROOT/
+* Accessible at:
+  http://localhost:8080/
+
+---
+
+## NORMAL WAR DEPLOYMENT
+
+* If you place:
+  app.war  → runs as → http://localhost:8080/app
+
+---
+
+## DEPLOY APPLICATION AS ROOT
+
+* To run your app at root (/):
+
+Step:
+
+* Rename WAR file
+  app.war → ROOT.war
+
+* Copy into
+  tomcat/webapps/
+
+---
+
+## WHAT HAPPENS INTERNALLY
+
+Tomcat automatically:
+
+* Detects ROOT.war (autoDeploy = true)
+* Stops existing ROOT app
+* Deletes old ROOT/ folder
+* Extracts ROOT.war
+* Creates new ROOT/
+* Deploys your app at /
+
+---
+
+## IMPORTANT POINT
+
+* You DO NOT need to manually delete ROOT
+* Tomcat handles replacement automatically
+
+---
+
+## REAL-TIME PRACTICE (PRODUCTION)
+
+Common method:
+
+* Copy ROOT.war into webapps/
+* Tomcat auto deploys
+
+Clean deployment:
+
+* Stop Tomcat
+* Delete:
+  webapps/ROOT/
+  webapps/ROOT.war (old)
+* Copy new ROOT.war
+* Start Tomcat
+
+---
+
+## CONFIGURATION RELATED
+
+In server.xml:
+
+<Host autoDeploy="true" unpackWARs="true">
+
+* autoDeploy = enables hot deployment
+* unpackWARs = extracts WAR into folder
+
+---
+
+* ROOT is default app
+* ROOT.war replaces ROOT automatically
+* No manual deletion required in most cases
+* Used to run app at http://localhost:80
+
+
+===================================================================================================================================
+
+DATE: 28 APR 2026
+
+
+
+
+===============================================
+1. SECURITY GROUP ( allow all traffic ) 
+2. WHY FEW PEOPLE ARE NOT ABLE TO CREATE FREE TIER ACCOUNT ?
+       Already Used Free Tier - If the person has already created a free-tier account with the same:
+       Email
+       Phone number
+       Credit card
+  → They cannot register again for free credits.
+
+
+==============================================
+JENKINS VIEWS :
+
+
+=================================================
+
+3. PARALLEL STAGE JOBS 
+
+In Jenkins, you can run multiple jobs in parallel within a single pipeline by using the parallel directive inside a stage. This is particularly useful when you want to speed up builds (e.g., running tests on multiple platforms, or executing independent tasks simultaneously).
+
+
+
+
+
+
+pipeline {
+    agent any
+
+    stages {
+	
+        stage('checkout') {
+            steps {
+                echo 'git checkout stage'
+				git branch: 'main', url: 'https://github.com/devopstraininghub/mindcircuit17d.git'
+            }
+        }
+
+        stage('build') {
+            steps {
+                echo 'Building with maven '
+				sh 'mvn clean install '
+            }
+        }
+		
+		
+   stage('Deploy to Multiple Environments') {
+      parallel {		
+
+        stage('Deploy to LAB') {
+            steps {
+                echo 'Deploying to tomcat'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://3.92.84.214:8081/')], contextPath: 'LAB-MC-APP', war: '**/*.war'
+				
+            }
+        }	
+
+               stage('Deploy to UAT') {
+            steps {
+                echo 'Deploying to tomcat'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://3.92.84.214:8081/')], contextPath: 'UAT-MC-APP', war: '**/*.war'
+				
+            }
+        }
+		
+		
+		   stage('Deploy to SBOX') {
+            steps {
+                echo 'Deploying to tomcat'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://3.92.84.214:8081/')], contextPath: 'SBOX-MC-APP', war: '**/*.war'
+				
+            }
+        }
+		
+		}
+		}
+    }
+}
+
+=====================
+
+4. BUILD SHOUD CONTINUE EVEN IF A STAGE FAILS IN PIPELINE : (USING try & catch blocks) :
+
+
+pipeline {
+
+    agent any
+    stages {
+          stage('CLONE GITHUB CODE') {
+            steps {
+                script {
+                    try {
+                        echo 'In this stage code will be cloned'
+                        git branch: 'master', url: 'https://github.com/devopstraininghub/mindcircuit177d.git'
+                    } 
+					catch (Exception e) {
+                        echo "Stage 1 failed: ${e.message}"
+                    }
+                }
+            }
+        }
+		
+        stage('Build Artifact') {
+            steps {
+                echo 'This stage builds the code using maven'
+			  // sh 'mvn clean install' 
+				
+            }
+        }
+
+      
+
+        }
+    }
+	
+	
+	==============================================================
+
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('CLONE GITHUB CODE') {
+            steps {
+                script {
+                    try {
+                        echo 'In this stage code will be cloned'
+                        git branch: 'master', url: 'https://github.com/devopstraininghub/mindcircuit17d.git'
+                    } 
+					catch (Exception e) {
+                        echo "Stage 1 failed: ${e.message}"
+                    }
+                }
+            }
+        }
+
+        stage('BUILDING THE CODE') {
+            steps {
+                script {
+                    try {
+                        echo 'In this stage code will be built and mvn artifact will be generated'
+                        sh 'mvn clean installlll'
+                    } catch (Exception e) {
+                        echo "Stage 2 failed: ${e.message}"
+                    }
+                }
+            }
+        }
+
+        stage('DEPLOY') {
+            steps {
+                  echo "deployed artifact to tomcat" 
+                }
+            }
+        }
+    }
+
+
+
+
+===================================================================================================
+5. PIPELINE WITH ENVIRONEMNT VARIABLES
+
+   Environment variables are key–value pairs that store information which can be used by processes, scripts, or applications.
+
+
+
+    export JAVA_HOME=/usr/lib/jvm/java-11
+    export PATH=$JAVA_HOME/bin:$PATH
+
+
+
+Environment Variables in Jenkins
+
+In Jenkins environment variables are:
+    
+    Values you can define globally, per-job, or inside a pipeline.
+    
+    Used to pass information between stages, steps, and scripts.
+    
+
+    Built-in variables                  vs
+	Custom environment variables
+    
+    BUILD_NUMBER → current build number
+    
+    WORKSPACE → path to job’s workspace
+    
+    JOB_NAME → name of the job
+    
+========================
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Show Built-in Env Variables') {
+            steps {
+                echo "Job Name: ${{env.JOB_NAME}"          // name of the Jenkins job
+                echo "Build Number: ${env.BUILD_NUMBER}" // auto-incremented build number
+                echo "Workspace: ${env.WORKSPACE}"       // directory where code is checked out
+                echo "Build ID: ${env.BUILD_ID}"         // unique ID for this build
+                echo "Node Name: ${env.NODE_NAME}"       // Jenkins agent name
+                echo "Executor Number: ${env.EXECUTOR_NUMBER}" // executor slot running this job
+         //       echo "Git Branch: ${env.GIT_BRANCH}"     // available if job is connected to Git
+            }
+        }
+
+        stage('Run Script with Env Vars') {
+            steps {
+                sh '''
+                    echo "We are running job: $JOB_NAME"
+                    echo "This is build number: $BUILD_NUMBER"
+                    echo "Workspace is: $WORKSPACE"
+                '''
+            }
+        }
+    }
+}
+
+===============================================================================	
+	
+
+
+pipeline {
+    agent any
+
+    environment {
+        GIT_URL = 'https://github.com/devopstraininghub/mindcircuit17d.git'
+        GIT_BRANCH = 'main'
+        MAVEN_CMD = 'mvn clean install'
+        TOMCAT_URL = 'http://3.92.84.214:8081/'
+    }
+
+    stages {
+
+        stage('checkout') {
+            steps {
+                echo 'git checkout stage'
+                git branch: "${GIT_BRANCH}", url: "${GIT_URL}"
+            }
+        }
+
+        stage('build') {
+            steps {
+                echo "Build number: ${env.BUILD_NUMBER}"
+                echo 'Building with maven'
+                sh "${MAVEN_CMD}"
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to tomcat'
+                deploy adapters: [
+                    tomcat9(
+                        alternativeDeploymentContext: '',
+                        credentialsId: 'tomcat',
+                        path: '',
+                        url: "${TOMCAT_URL}"
+                    )
+                ],
+                contextPath: 'insta',
+                war: '**/*.war'
+            }
+        }
+
+    }
+}
+
+
+
+
+
+==================================================================
+
+
+DATE:  29 APR 2026
+
+==================================================================
+
+NEXUS ARTIFACTORY :
+
+
+LINUX COMMANDS :
+
+
+
+chown -R user:group file/dir  ( Change file ownership ) 
+
+chkconfig ---> systemctl enable 
+
+version id --> 8.2.0 -->>> going to be released
+version id --> 8.2.0-SNAPSHOT -->>> under development / on going implementation
+
+
+
+NEXUS :
+
+BY sonatye 
+opensource 
+java based software 
+LISTENS ON PORT : 8081 
+
+blog to follow : https://devopscube.com/how-to-install-latest-sonatype-nexus-3-on-linux/
+
+
+============
+
+scm - git 
+
+nexus -- artifacts 
+s3 :
+
+history:
+
+    1  ll
+    2  cd /opt/
+    3  ll
+    4  touch test
+    5  ll
+    6  useradd madhu
+    7  ll
+    8  chown -R madhu:madhu test
+    9  ll
+   10  sudo yum update -y
+   11  sudo yum install wget -y
+   12  sudo yum install java-17-openjdk -y
+   13  sudo yum install java-17 -y
+   14  java --version
+   15  sudo mkdir /app && cd /app
+   16  pwd
+   17  sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+   18  wget https://download.sonatype.com/nexus/3/nexus-3.91.1-04-linux-x86_64.tar.gz
+   19  ll
+   20  rm -rf *
+   21  ll
+   22  sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/nexus-3.91.1-04-linux-x86_64.tar.gz
+   23  ll
+   24  tar -xvf nexus.tar.gz
+   25  ll
+   26  mv nexus-3.91.1-04/ nexus
+   27  ll
+   28  sudo adduser nexus
+   29  cat /etc/passwd
+   30  ll
+   31  sudo chown -R nexus:nexus /app/nexus
+   32  sudo chown -R nexus:nexus /app/sonatype-work
+   33  ll
+   34  cd nexus/
+   35  ll
+   36  cd bin/
+   37  ll
+   38  sudo vi  /app/nexus/bin/nexus.rc
+   39  cat /app/nexus/bin/nexus.rc
+   40  ll
+   41  cat nexus.vmoptions
+   42  ll
+   43  systemctl status nexus
+   44  sudo vi /etc/systemd/system/nexus.service
+   45  sudo chkconfig nexus on
+   46  systemctl start nexuus
+   47  systemctl start nexus
+   48  systemctl status nexus
+   49  cat /app/sonatype-work/nexus3/admin.password
+   50  history
+
+
+
+####
+
+//
+
+
+
+==============
+http://54.82.92.150:8081/repository/batch17d-repo-release/
+
+http://54.82.92.150:8081/repository/batch17d-repo-snapshot/
+
+
+in POM.XML : 
+
+
+	<distributionManagement>
+		 <snapshotRepository>
+		    <id>NexusRepo</id>
+		    <url>http://54.82.92.150:8081/repository/batch17d-repo-snapshot/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>NexusRepo</id>
+		    <url>http://54.82.92.150:8081/repository/batch17d-repo-release/</url>
+		</repository>
+  	</distributionManagement>
+
+
+
+========================================
+
+IN JENKINS/MAVEN SERVER --> /etc/maven/setting.xml
+ADD the content 
+
+    <server>
+      <id>NexusRepo</id>
+      <username>admin</username>
+      <password>Test@123</password>
+    </server>
+
+
+
+
+======================================================================================================
+
+DATE: 1 MAY2026
+
+
+
+MAVEN:
+
+--------------------------------------------------
+WHAT IS MAVEN?
+--------------------------------------------------
+
+    Maven is a build automation and dependency
+    management tool used mainly for Java projects.
+
+    It helps to:
+
+        • Compile code
+        • Run tests
+        • Package application (JAR/WAR)
+        • Manage dependencies
+
+
+--------------------------------------------------
+WHY MAVEN IS REQUIRED?
+--------------------------------------------------
+
+    Maven is both a build automation tool and a
+    project management tool because it manages
+    dependencies, project structure, lifecycle,
+    and build process using pom.xml.
+
+mvn archetype:generate 
+
+    Maven solves:
+
+        • Automatic dependency download
+        • Standard project structure
+        • Easy build process
+        • Faster development
+
+ant 
+grade --> build.xml 
+--------------------------------------------------
+WHAT MAVEN DOES?
+--------------------------------------------------
+
+    Maven automates:
+
+        Source Code
+            ↓
+        Compile
+            ↓
+        Test
+            ↓
+        Package (JAR/WAR)
+            ↓
+        Deploy
+
+
+--------------------------------------------------
+MAVEN PROJECT STRUCTURE
+--------------------------------------------------
+
+    project/
+        src/
+            main/java
+            main/resources
+            test/java
+        pom.xml
+        target/
+
+    target/:
+        Output folder (build files)
+
+
+--------------------------------------------------
+WHAT IS pom.xml?
+--------------------------------------------------
+
+    pom.xml = Project Object Model
+
+    It is the heart of Maven project.
+
+    It defines:
+
+        • Project details
+        • Dependencies
+        • Plugins
+        • Build configuration
+
+
+--------------------------------------------------
+BASIC pom.xml STRUCTURE
+--------------------------------------------------
+
+    <project>
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>com.example</groupId>
+        <artifactId>my-app</artifactId>
+        <version>1.0</version>
+
+        <dependencies>
+            <!-- dependencies -->
+			
+			<dependency>
+                 <groupId>org.seleniumhq.selenium</groupId>
+                 <artifactId>selenium-java</artifactId>
+                   <version>4.41.0</version>
+            </dependency>
+			
+			
+        </dependencies>
+    </project>
+
+
+--------------------------------------------------
+IMPORTANT ELEMENTS IN pom.xml
+--------------------------------------------------
+
+    groupId:
+        Organization/company name
+
+    artifactId:
+        Project name
+
+    version:
+        Project version
+
+    packaging:
+        jar / war
+
+    dependencies:
+        External libraries required
+
+
+--------------------------------------------------
+DEPENDENCY EXAMPLE
+--------------------------------------------------
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+        </dependency>
+    </dependencies>
+
+    Maven downloads dependencies automatically
+    from Maven Central Repository.
+
+
+--------------------------------------------------
+MAVEN LIFECYCLE (VERY IMPORTANT)
+--------------------------------------------------
+
+    validate
+    compile
+    test
+    package
+    verify
+    install
+    deploy
+
+Example:
+
+    mvn clean install
+
+
+--------------------------------------------------
+COMMON MAVEN COMMANDS
+--------------------------------------------------
+
+    mvn clean
+        Remove old build files
+
+    mvn compile
+        Compile code
+
+    mvn test
+        Run tests
+
+    mvn package
+        Create JAR/WAR
+
+    mvn install
+        Install in local repo
+
+    mvn clean install
+        Full build
+
+
+--------------------------------------------------
+MAVEN REPOSITORIES
+--------------------------------------------------
+
+    1) Local Repository
+        ~/.m2/
+
+    2) Central Repository
+        https://repo.maven.apache.org
+
+    3) Remote Repository 
+
+
+--------------------------------------------------
+REAL DEVOPS USE CASE
+--------------------------------------------------
+
+    Developer pushes code → GitHub
+
+        ↓
+
+    Jenkins pipeline triggers
+
+        ↓
+
+    Maven builds project:
+
+            mvn clean package
+
+        ↓
+
+    WAR file generated
+
+        ↓
+
+    Deploy to Tomcat / Docker / Kubernetes
+
+
+--------------------------------------------------
+ADVANTAGES OF MAVEN
+--------------------------------------------------
+
+    • Dependency management
+    • Standard project structure
+    • Easy build automation
+    • Integration with Jenkins
+    • Reusable builds
+
+
+
+====================================================================
+JENKINS SHARED LIBRARIES :
+====================================================================
+
+--------------------------------------------------
+WHAT IS SHARED LIBRARY?
+--------------------------------------------------
+
+    Shared Library = Reusable Jenkins pipeline code
+
+    Instead of writing same pipeline code
+    again and again, we store it in one place
+    and reuse it across projects.
+
+
+--------------------------------------------------
+WHY WE NEED SHARED LIBRARY?
+--------------------------------------------------
+
+    Problem:
+
+        • Duplicate pipeline code
+        • Hard to maintain
+        • Changes needed in multiple jobs
+
+    Solution:
+
+        • Write once
+        • Use everywhere
+
+
+--------------------------------------------------
+SIMPLE USE CASE
+--------------------------------------------------
+
+    Scenario:
+
+        10 projects use same build steps:
+
+            • Checkout code
+            • Build using Maven
+            • Deploy
+
+    Without shared library:
+
+        Same code repeated in 10 pipelines ❌
+
+    With shared library:
+
+        One common function → reused everywhere ✅
+
+
+--------------------------------------------------
+STRUCTURE OF SHARED LIBRARY
+--------------------------------------------------
+
+    (Git Repo)
+
+    vars/
+        build.groovy
+
+    src/
+        (optional advanced code)
+
+    resources/
+        (files like templates)
+
+
+--------------------------------------------------
+SIMPLE EXAMPLE
+--------------------------------------------------
+
+Step 1: Create shared function
+
+    vars/build.groovy
+
+    def call() {
+        echo "Building application..."
+        sh 'mvn clean install'
+    }
+
+
+--------------------------------------------------
+Step 2: Use in Jenkinsfile
+--------------------------------------------------
+
+    @Library('my-shared-lib') _
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    build()
+                }
+            }
+        }
+    }
+
+
+--------------------------------------------------
+HOW TO CONFIGURE IN JENKINS
+--------------------------------------------------
+
+    Manage Jenkins
+        → Global Pipeline Libraries
+
+    Add:
+
+        Name: my-shared-lib
+        Source: Git repo URL
+
+
+--------------------------------------------------
+REAL DEVOPS USE CASE
+--------------------------------------------------
+
+    Common functions:
+
+        • build()
+        • test()
+        • deploy()
+        • dockerBuild()
+
+    Used across:
+
+        • Multiple microservices
+        • Multiple teams
+
+
+--------------------------------------------------
+ADVANTAGES
+--------------------------------------------------
+
+    • Code reuse
+    • Easy maintenance
+    • Standard pipelines
+    • Faster development
+
+
+--------------------------------------------------
+SIMPLE SUMMARY
+--------------------------------------------------
+
+    Shared Library = Common reusable pipeline code
+
+    Write once → Use in many Jenkins pipelines
+
+
+======================================================================
+CACHING IN JENKINS 
+====================================================================
+
+--------------------------------------------------
+WHAT IS CACHING?
+--------------------------------------------------
+
+    Caching = Storing frequently used data
+              to reuse later.
+
+    Purpose:
+
+        • Avoid repeating same work
+        • Speed up builds
+
+
+--------------------------------------------------
+WHY CACHING IS NEEDED IN JENKINS?
+--------------------------------------------------
+
+    Without cache:
+
+        Every build:
+            • Downloads dependencies again
+            • Rebuilds everything
+
+        → Slow builds ❌
+
+    With cache:
+
+        • Reuse previous data
+        • Faster execution ✅
+
+
+--------------------------------------------------
+SIMPLE USE CASE (MAVEN)
+--------------------------------------------------
+
+    Scenario:
+
+        Jenkins builds Java project using Maven
+
+    First build:
+
+        • Downloads dependencies
+        • Stores in:
+
+            ~/.m2/repository
+
+    Next builds:
+
+        • Uses cached dependencies
+        • No re-download
+
+        → Faster build 🚀
+
+
+--------------------------------------------------
+WHERE CACHING HAPPENS?
+--------------------------------------------------
+
+    1) Workspace caching
+    2) Tool cache (Maven, npm, etc.)
+    3) Docker layer cache
+    4) Dependency cache
+
+
+--------------------------------------------------
+EXAMPLE – MAVEN CACHE
+--------------------------------------------------
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    sh 'mvn clean package'
+                }
+            }
+        }
+    }
+
+    Maven uses:
+
+        ~/.m2/repository
+
+    as cache automatically.
+
+
+--------------------------------------------------
+EXAMPLE – NPM CACHE
+--------------------------------------------------
+
+    npm install
+
+    Cache location:
+
+        ~/.npm
+
+    Speeds up Node.js builds.
+
+
+--------------------------------------------------
+DOCKER CACHE (IMPORTANT)
+--------------------------------------------------
+
+    Docker uses layer caching.
+
+    If no change in layer:
+
+        → reused
+
+    Example:
+
+        docker build .
+
+    Only changed layers rebuild.
+
+
+--------------------------------------------------
+HOW TO IMPROVE CACHING IN JENKINS?
+--------------------------------------------------
+
+    • Use persistent workspace
+    • Use same agent/node
+    • Avoid deleting cache directories
+    • Use external cache storage if needed
+
+
+--------------------------------------------------
+REAL DEVOPS USE CASE
+--------------------------------------------------
+
+    CI pipeline:
+
+        First build → 10 mins
+
+        Next builds → 2 mins
+
+    Reason:
+
+        Dependencies already cached
+
+
+--------------------------------------------------
+IMPORTANT NOTES
+--------------------------------------------------
+
+    • Cache improves performance
+    • But must manage properly
+    • Clear cache if corrupted
+
+
+--------------------------------------------------
+SIMPLE SUMMARY
+--------------------------------------------------
+
+    Caching = Reuse previous data
+
+    Benefit:
+        Faster builds
+
+    Example:
+        Maven dependencies cached in ~/.m2
+
+
+
+
+*************************************************************************************************
+====================================================================
+JENKINS "WHEN" CONDITION – SIMPLE NOTES
+====================================================================
+
+--------------------------------------------------
+WHAT IS "WHEN" IN JENKINS?
+--------------------------------------------------
+
+    "when" is used to run a stage only
+    when a condition is TRUE.
+
+    It controls pipeline execution.
+
+
+--------------------------------------------------
+WHY DO WE USE "WHEN"?
+--------------------------------------------------
+
+    • Avoid unnecessary steps
+    • Run stages based on conditions
+    • Improve pipeline efficiency
+
+
+--------------------------------------------------
+SYNTAX
+--------------------------------------------------
+
+    stage('Deploy') {
+        when {
+            condition
+        }
+        steps {
+            // actions
+        }
+    }
+
+
+--------------------------------------------------
+SIMPLE USE CASE (BRANCH BASED)
+--------------------------------------------------
+
+    Scenario:
+
+        Deploy only if branch = main
+
+Example:
+
+    pipeline {
+        agent any
+
+        stages {
+            stage('Build') {
+                steps {
+                    echo "Building..."
+                }
+            }
+
+            stage('Deploy') {
+                when {
+                    branch 'main'
+                }
+                steps {
+                    echo "Deploying to production..."
+                }
+            }
+        }
+    }
+
+    Result:
+
+        main branch → Deploy runs ✅
+        other branch → Deploy skipped ❌
+
+
+--------------------------------------------------
+COMMON WHEN CONDITIONS
+--------------------------------------------------
+
+1) Branch condition:
+
+    when {
+        branch 'main'
+    }
+
+2) Environment condition:
+
+    when {
+        environment name: 'ENV', value: 'prod'
+    }
+
+3) Expression (custom logic):
+
+    when {
+        expression {
+            return env.BUILD_NUMBER.toInteger() > 5
+        }
+    }
+
+4) Changeset:
+
+    when {
+        changeset "**/*.java"       ###  Any Java file changed anywhere in project
+    }
+
+5) Tag-based:
+
+    when {
+        tag "v*"
+    }
+
+
+--------------------------------------------------
+REAL DEVOPS USE CASE
+--------------------------------------------------
+
+    Scenario:
+
+        • Build → always
+        • Test → always
+        • Deploy → only for production
+
+    Benefit:
+
+        Avoid accidental deployments
+
+
+--------------------------------------------------
+IMPORTANT NOTES
+--------------------------------------------------
+
+    • Works in Declarative Pipeline
+    • Evaluated before stage execution
+    • Skips stage if condition fails
+
+
+--------------------------------------------------
+SIMPLE SUMMARY
+--------------------------------------------------
+
+    when = condition to run a stage
+
+    If TRUE → stage runs
+    If FALSE → stage skipped
+
+    Used for:
+        Branch, env, logic-based execution
+		
+		
+
+
