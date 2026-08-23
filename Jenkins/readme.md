@@ -93,3 +93,6 @@ pipeline {
 
 ```
 
+---
+
+Set the Payload URL to your Jenkins server's webhook URL. This is typically http://your-jenkins-server/github-webhook/for GitHub.
